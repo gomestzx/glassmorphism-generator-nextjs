@@ -1,0 +1,23 @@
+.controls {
+  background-color: #e8e2fc;
+  padding: 20px;
+  @media screen and (max-width: 840px) {
+    padding: 20px 50px;
+    
+  }
+  .label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+    color: #623cea;
+    font-weight: 600;
+    font-size: 15px;
+  }
+}
+
+.slider {
+  max-width: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
