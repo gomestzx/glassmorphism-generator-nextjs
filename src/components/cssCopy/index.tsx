@@ -5,7 +5,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { toast, ToastContainer } from 'react-toast';
 
 const CssCopy = () => {
-  const { blur, borderRadius } = useControlsContext();
+  const { blur, borderRadius, trasnparency } = useControlsContext();
   const wave = () => toast('Link Copiado 🎉', {
     backgroundColor: '#6955ED'
   });
@@ -13,17 +13,17 @@ const CssCopy = () => {
     <div className={style.cssCopy}>
       <textarea
         className={style.textarea}
-        value={`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nborder-radius: ${borderRadius}px`}
+        value={`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nrgba(142, 209, 252, ${trasnparency})\nborder-radius: ${borderRadius}px`}
         readOnly
       ></textarea>
       <br />
       <CopyToClipboard
-        text={`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nborder-radius: ${borderRadius}px`}
+        text={`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nrgba(142, 209, 252, ${trasnparency})\nborder-radius: ${borderRadius}px`}
       >
         <button onClick={wave}>COPY</button>
       </CopyToClipboard>
 
-      <ToastContainer position='bottom-center' delay={1500}/>
+      <ToastContainer position='top-center' delay={1500}/>
     </div>
   );
 };

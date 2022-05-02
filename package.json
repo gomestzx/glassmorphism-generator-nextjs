@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.12.4",
+    "@types/aos": "^3.0.4",
     "@types/react-copy-to-clipboard": "^5.0.2",
+    "aos": "^3.0.0-beta.6",
     "next": "12.1.5",
     "react": "18.1.0",
     "react-copy-to-clipboard": "^5.1.0",

@@ -7,14 +7,23 @@ import style from '../../styles/Home.module.scss';
 import Controls from '../components/controls';
 import CssCopy from '../components/cssCopy';
 
-
 /* Context */
 
 import { ControlsProvider } from '../context/controlsContext';
 import Container from '../components/container';
 import Header from '../components/header';
 
+/* Animation */
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 const Home: NextPage = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div className={style.app}>
       <Head>
@@ -25,7 +34,12 @@ const Home: NextPage = () => {
       <ControlsProvider>
         <Header />
         <Container />
-        <div className={style.flex}>
+        <div
+          className={style.flex}
+          data-aos='zoom-in-right'
+          data-aos-delay='80'
+          data-aos-duration='3000'
+        >
           <Controls />
           <CssCopy />
         </div>

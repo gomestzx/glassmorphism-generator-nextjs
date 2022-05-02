@@ -13,6 +13,10 @@ const Header = () => {
         backdropFilter: `blur(${blur}px)`,
         WebkitBackdropFilter: `blur(${blur}px)`,
       }}
+      data-aos='fade-in'
+      data-aos-delay='80'
+      data-aos-duration='3000'
+      
     >
       <Link href='http://github.com/gomestzx'>Ver codigo fonte 🚀</Link>
     </div>
