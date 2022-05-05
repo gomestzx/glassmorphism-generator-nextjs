@@ -1,6 +1,9 @@
 .background {
     background-image: url('/main.png');
     background-size: cover;
+    @media screen and (max-width: 385px) {
+      margin-top: 200px;
+    }
 }
 
 .container {
