@@ -14,10 +14,7 @@ const Controls = () => {
   } = useControlsContext();
 
   return (
-    <div
-      className={style.controls}
-      
-    >
+    <div className={style.controls}>
       <div className={style.label}>
         <span>Blur</span>
         <span> {blur}</span>
